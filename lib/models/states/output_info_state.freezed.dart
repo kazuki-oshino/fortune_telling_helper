@@ -18,14 +18,14 @@ class _$OutputInfoStateTearOff {
 
   _OutputInfoState call(
       {Map<BloodType, TarotResult>? tarotResults,
-      required String firstBloodType,
-      required String secondBloodType,
-      required String thirdBloodType,
-      required String forthBloodType,
-      required String firstDescription,
-      required String secondDescription,
-      required String thirdDescription,
-      required String forthDescription}) {
+      String? firstBloodType,
+      String? secondBloodType,
+      String? thirdBloodType,
+      String? forthBloodType,
+      String? firstDescription,
+      String? secondDescription,
+      String? thirdDescription,
+      String? forthDescription}) {
     return _OutputInfoState(
       tarotResults: tarotResults,
       firstBloodType: firstBloodType,
@@ -47,14 +47,14 @@ const $OutputInfoState = _$OutputInfoStateTearOff();
 mixin _$OutputInfoState {
   Map<BloodType, TarotResult>? get tarotResults =>
       throw _privateConstructorUsedError;
-  String get firstBloodType => throw _privateConstructorUsedError;
-  String get secondBloodType => throw _privateConstructorUsedError;
-  String get thirdBloodType => throw _privateConstructorUsedError;
-  String get forthBloodType => throw _privateConstructorUsedError;
-  String get firstDescription => throw _privateConstructorUsedError;
-  String get secondDescription => throw _privateConstructorUsedError;
-  String get thirdDescription => throw _privateConstructorUsedError;
-  String get forthDescription => throw _privateConstructorUsedError;
+  String? get firstBloodType => throw _privateConstructorUsedError;
+  String? get secondBloodType => throw _privateConstructorUsedError;
+  String? get thirdBloodType => throw _privateConstructorUsedError;
+  String? get forthBloodType => throw _privateConstructorUsedError;
+  String? get firstDescription => throw _privateConstructorUsedError;
+  String? get secondDescription => throw _privateConstructorUsedError;
+  String? get thirdDescription => throw _privateConstructorUsedError;
+  String? get forthDescription => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $OutputInfoStateCopyWith<OutputInfoState> get copyWith =>
@@ -68,14 +68,14 @@ abstract class $OutputInfoStateCopyWith<$Res> {
       _$OutputInfoStateCopyWithImpl<$Res>;
   $Res call(
       {Map<BloodType, TarotResult>? tarotResults,
-      String firstBloodType,
-      String secondBloodType,
-      String thirdBloodType,
-      String forthBloodType,
-      String firstDescription,
-      String secondDescription,
-      String thirdDescription,
-      String forthDescription});
+      String? firstBloodType,
+      String? secondBloodType,
+      String? thirdBloodType,
+      String? forthBloodType,
+      String? firstDescription,
+      String? secondDescription,
+      String? thirdDescription,
+      String? forthDescription});
 }
 
 /// @nodoc
@@ -107,35 +107,35 @@ class _$OutputInfoStateCopyWithImpl<$Res>
       firstBloodType: firstBloodType == freezed
           ? _value.firstBloodType
           : firstBloodType // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       secondBloodType: secondBloodType == freezed
           ? _value.secondBloodType
           : secondBloodType // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       thirdBloodType: thirdBloodType == freezed
           ? _value.thirdBloodType
           : thirdBloodType // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       forthBloodType: forthBloodType == freezed
           ? _value.forthBloodType
           : forthBloodType // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       firstDescription: firstDescription == freezed
           ? _value.firstDescription
           : firstDescription // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       secondDescription: secondDescription == freezed
           ? _value.secondDescription
           : secondDescription // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       thirdDescription: thirdDescription == freezed
           ? _value.thirdDescription
           : thirdDescription // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       forthDescription: forthDescription == freezed
           ? _value.forthDescription
           : forthDescription // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
     ));
   }
 }
@@ -149,14 +149,14 @@ abstract class _$OutputInfoStateCopyWith<$Res>
   @override
   $Res call(
       {Map<BloodType, TarotResult>? tarotResults,
-      String firstBloodType,
-      String secondBloodType,
-      String thirdBloodType,
-      String forthBloodType,
-      String firstDescription,
-      String secondDescription,
-      String thirdDescription,
-      String forthDescription});
+      String? firstBloodType,
+      String? secondBloodType,
+      String? thirdBloodType,
+      String? forthBloodType,
+      String? firstDescription,
+      String? secondDescription,
+      String? thirdDescription,
+      String? forthDescription});
 }
 
 /// @nodoc
@@ -190,35 +190,35 @@ class __$OutputInfoStateCopyWithImpl<$Res>
       firstBloodType: firstBloodType == freezed
           ? _value.firstBloodType
           : firstBloodType // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       secondBloodType: secondBloodType == freezed
           ? _value.secondBloodType
           : secondBloodType // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       thirdBloodType: thirdBloodType == freezed
           ? _value.thirdBloodType
           : thirdBloodType // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       forthBloodType: forthBloodType == freezed
           ? _value.forthBloodType
           : forthBloodType // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       firstDescription: firstDescription == freezed
           ? _value.firstDescription
           : firstDescription // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       secondDescription: secondDescription == freezed
           ? _value.secondDescription
           : secondDescription // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       thirdDescription: thirdDescription == freezed
           ? _value.thirdDescription
           : thirdDescription // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       forthDescription: forthDescription == freezed
           ? _value.forthDescription
           : forthDescription // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
     ));
   }
 }
@@ -230,33 +230,33 @@ class _$_OutputInfoState
     implements _OutputInfoState {
   const _$_OutputInfoState(
       {this.tarotResults,
-      required this.firstBloodType,
-      required this.secondBloodType,
-      required this.thirdBloodType,
-      required this.forthBloodType,
-      required this.firstDescription,
-      required this.secondDescription,
-      required this.thirdDescription,
-      required this.forthDescription});
+      this.firstBloodType,
+      this.secondBloodType,
+      this.thirdBloodType,
+      this.forthBloodType,
+      this.firstDescription,
+      this.secondDescription,
+      this.thirdDescription,
+      this.forthDescription});
 
   @override
   final Map<BloodType, TarotResult>? tarotResults;
   @override
-  final String firstBloodType;
+  final String? firstBloodType;
   @override
-  final String secondBloodType;
+  final String? secondBloodType;
   @override
-  final String thirdBloodType;
+  final String? thirdBloodType;
   @override
-  final String forthBloodType;
+  final String? forthBloodType;
   @override
-  final String firstDescription;
+  final String? firstDescription;
   @override
-  final String secondDescription;
+  final String? secondDescription;
   @override
-  final String thirdDescription;
+  final String? thirdDescription;
   @override
-  final String forthDescription;
+  final String? forthDescription;
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
@@ -334,34 +334,34 @@ class _$_OutputInfoState
 abstract class _OutputInfoState implements OutputInfoState {
   const factory _OutputInfoState(
       {Map<BloodType, TarotResult>? tarotResults,
-      required String firstBloodType,
-      required String secondBloodType,
-      required String thirdBloodType,
-      required String forthBloodType,
-      required String firstDescription,
-      required String secondDescription,
-      required String thirdDescription,
-      required String forthDescription}) = _$_OutputInfoState;
+      String? firstBloodType,
+      String? secondBloodType,
+      String? thirdBloodType,
+      String? forthBloodType,
+      String? firstDescription,
+      String? secondDescription,
+      String? thirdDescription,
+      String? forthDescription}) = _$_OutputInfoState;
 
   @override
   Map<BloodType, TarotResult>? get tarotResults =>
       throw _privateConstructorUsedError;
   @override
-  String get firstBloodType => throw _privateConstructorUsedError;
+  String? get firstBloodType => throw _privateConstructorUsedError;
   @override
-  String get secondBloodType => throw _privateConstructorUsedError;
+  String? get secondBloodType => throw _privateConstructorUsedError;
   @override
-  String get thirdBloodType => throw _privateConstructorUsedError;
+  String? get thirdBloodType => throw _privateConstructorUsedError;
   @override
-  String get forthBloodType => throw _privateConstructorUsedError;
+  String? get forthBloodType => throw _privateConstructorUsedError;
   @override
-  String get firstDescription => throw _privateConstructorUsedError;
+  String? get firstDescription => throw _privateConstructorUsedError;
   @override
-  String get secondDescription => throw _privateConstructorUsedError;
+  String? get secondDescription => throw _privateConstructorUsedError;
   @override
-  String get thirdDescription => throw _privateConstructorUsedError;
+  String? get thirdDescription => throw _privateConstructorUsedError;
   @override
-  String get forthDescription => throw _privateConstructorUsedError;
+  String? get forthDescription => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$OutputInfoStateCopyWith<_OutputInfoState> get copyWith =>

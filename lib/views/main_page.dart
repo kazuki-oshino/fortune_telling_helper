@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
+import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:tarot_blood_type/common/constants.dart';
+import 'package:tarot_blood_type/view_models/output_info_controller.dart';
 import 'package:tarot_blood_type/views/parts/table_row_text_part.dart';
 
 class MainPage extends HookWidget {
@@ -8,6 +10,8 @@ class MainPage extends HookWidget {
 
   @override
   Widget build(BuildContext context) {
+    final state = useProvider(outputInfoProvider);
+    final notifier = useProvider(outputInfoProvider.notifier);
     return Scaffold(
       appBar: AppBar(
         title: const Text('神'),
@@ -18,7 +22,7 @@ class MainPage extends HookWidget {
           child: Column(
             children: [
               OutlinedButton.icon(
-                onPressed: () {},
+                onPressed: notifier.executeFortuneTelling,
                 label: const Text('占う'),
                 icon: const Icon(Icons.terrain),
               ),
@@ -27,12 +31,15 @@ class MainPage extends HookWidget {
               ),
               // 占い結果
               Table(
+                columnWidths: const {
+                  0: FractionColumnWidth(0.1),
+                },
                 defaultVerticalAlignment: TableCellVerticalAlignment.top,
                 border: TableBorder.all(
                   color: Colors.white,
                 ),
-                children: const [
-                  TableRow(
+                children: [
+                  const TableRow(
                       decoration: BoxDecoration(color: Colors.indigo),
                       children: [
                         TableRowTextPart(text: '血液型'),
@@ -40,62 +47,26 @@ class MainPage extends HookWidget {
                         TableRowTextPart(text: 'アドバイス'),
                       ]),
                   TableRow(children: [
-                    Text(
-                      'A型',
-                      textAlign: TextAlign.center,
-                    ),
-                    Text(
-                      '血液型',
-                      textAlign: TextAlign.center,
-                    ),
-                    Text(
-                      '血液型',
-                      textAlign: TextAlign.center,
-                    ),
+                    const TableRowTextPart(text: 'A型'),
+                    TableRowTextPart(text: notifier.typeAResult),
+                    TableRowTextPart(text: notifier.typeAAdvice),
                   ]),
                   TableRow(
                     children: [
-                      Text(
-                        'B型',
-                        textAlign: TextAlign.center,
-                      ),
-                      Text(
-                        '血液型',
-                        textAlign: TextAlign.center,
-                      ),
-                      Text(
-                        '血液型',
-                        textAlign: TextAlign.center,
-                      ),
+                      const TableRowTextPart(text: 'B型'),
+                      TableRowTextPart(text: notifier.typeBResult),
+                      TableRowTextPart(text: notifier.typeBAdvice),
                     ],
                   ),
                   TableRow(children: [
-                    Text(
-                      'O型',
-                      textAlign: TextAlign.center,
-                    ),
-                    Text(
-                      '血液型',
-                      textAlign: TextAlign.center,
-                    ),
-                    Text(
-                      '血液型',
-                      textAlign: TextAlign.center,
-                    ),
+                    const TableRowTextPart(text: 'O型'),
+                    TableRowTextPart(text: notifier.typeOResult),
+                    TableRowTextPart(text: notifier.typeOAdvice),
                   ]),
                   TableRow(children: [
-                    Text(
-                      'AB型',
-                      textAlign: TextAlign.center,
-                    ),
-                    Text(
-                      '血液型',
-                      textAlign: TextAlign.center,
-                    ),
-                    Text(
-                      '血液型',
-                      textAlign: TextAlign.center,
-                    ),
+                    const TableRowTextPart(text: 'AB型'),
+                    TableRowTextPart(text: notifier.typeABResult),
+                    TableRowTextPart(text: notifier.typeABAdvice),
                   ]),
                 ],
               ),

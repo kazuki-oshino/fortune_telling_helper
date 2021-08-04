@@ -9,13 +9,13 @@ part 'output_info_state.freezed.dart';
 class OutputInfoState with _$OutputInfoState {
   const factory OutputInfoState({
     Map<BloodType, TarotResult>? tarotResults,
-    required String firstBloodType,
-    required String secondBloodType,
-    required String thirdBloodType,
-    required String forthBloodType,
-    required String firstDescription,
-    required String secondDescription,
-    required String thirdDescription,
-    required String forthDescription,
+    String? firstBloodType,
+    String? secondBloodType,
+    String? thirdBloodType,
+    String? forthBloodType,
+    String? firstDescription,
+    String? secondDescription,
+    String? thirdDescription,
+    String? forthDescription,
   }) = _OutputInfoState;
 }
