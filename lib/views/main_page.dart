@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:tarot_blood_type/common/constants.dart';
+import 'package:tarot_blood_type/views/parts/table_row_text_part.dart';
 
 class MainPage extends HookWidget {
   const MainPage({Key? key}) : super(key: key);
@@ -27,23 +28,17 @@ class MainPage extends HookWidget {
               // 占い結果
               Table(
                 defaultVerticalAlignment: TableCellVerticalAlignment.top,
-                border: TableBorder.all(color: Colors.white,),
+                border: TableBorder.all(
+                  color: Colors.white,
+                ),
                 children: const [
-                  TableRow(children: [
-                    Text(
-                      '血液型',
-                      textAlign: TextAlign.center,
-                      style: TextStyle(fontSize: 20),
-                    ),
-                    Text(
-                      '結果',
-                      textAlign: TextAlign.center,
-                    ),
-                    Text(
-                      'アドバイス',
-                      textAlign: TextAlign.center,
-                    ),
-                  ]),
+                  TableRow(
+                      decoration: BoxDecoration(color: Colors.indigo),
+                      children: [
+                        TableRowTextPart(text: '血液型'),
+                        TableRowTextPart(text: '結果'),
+                        TableRowTextPart(text: 'アドバイス'),
+                      ]),
                   TableRow(children: [
                     Text(
                       'A型',
@@ -58,20 +53,21 @@ class MainPage extends HookWidget {
                       textAlign: TextAlign.center,
                     ),
                   ]),
-                  TableRow(children: [
-                    Text(
-                      'B型',
-                      textAlign: TextAlign.center,
-                    ),
-                    Text(
-                      '血液型',
-                      textAlign: TextAlign.center,
-                    ),
-                    Text(
-                      '血液型',
-                      textAlign: TextAlign.center,
-                    ),
-                  ],
+                  TableRow(
+                    children: [
+                      Text(
+                        'B型',
+                        textAlign: TextAlign.center,
+                      ),
+                      Text(
+                        '血液型',
+                        textAlign: TextAlign.center,
+                      ),
+                      Text(
+                        '血液型',
+                        textAlign: TextAlign.center,
+                      ),
+                    ],
                   ),
                   TableRow(children: [
                     Text(
@@ -116,96 +112,118 @@ class MainPage extends HookWidget {
               Row(
                 children: [
                   const Text('1位'),
-                  const SizedBox(width: 10,),
+                  const SizedBox(
+                    width: 10,
+                  ),
                   DropdownButton(
                     items: bloodTypeList
                         .map(
                           (String e) => DropdownMenuItem<String>(
-                        value: e,
-                        child: Text(e),
-                      ),
-                    )
+                            value: e,
+                            child: Text(e),
+                          ),
+                        )
                         .toList(),
                     value: 'A型',
                     onChanged: (value) {
                       print(value);
                     },
                   ),
-                  const SizedBox(width: 30,),
+                  const SizedBox(
+                    width: 30,
+                  ),
                   const Text('2位'),
-                  const SizedBox(width: 10,),
+                  const SizedBox(
+                    width: 10,
+                  ),
                   DropdownButton(
                     items: bloodTypeList
                         .map(
                           (String e) => DropdownMenuItem<String>(
-                        value: e,
-                        child: Text(e),
-                      ),
-                    )
+                            value: e,
+                            child: Text(e),
+                          ),
+                        )
                         .toList(),
                     value: 'A型',
                     onChanged: (value) {
                       print(value);
                     },
                   ),
-                  const SizedBox(width: 30,),
+                  const SizedBox(
+                    width: 30,
+                  ),
                   const Text('3位'),
-                  const SizedBox(width: 10,),
+                  const SizedBox(
+                    width: 10,
+                  ),
                   DropdownButton(
                     items: bloodTypeList
                         .map(
                           (String e) => DropdownMenuItem<String>(
-                        value: e,
-                        child: Text(e),
-                      ),
-                    )
+                            value: e,
+                            child: Text(e),
+                          ),
+                        )
                         .toList(),
                     value: 'A型',
                     onChanged: (value) {
                       print(value);
                     },
                   ),
-                  const SizedBox(width: 30,),
+                  const SizedBox(
+                    width: 30,
+                  ),
                   const Text('4位'),
-                  const SizedBox(width: 10,),
+                  const SizedBox(
+                    width: 10,
+                  ),
                   DropdownButton(
                     items: bloodTypeList
                         .map(
                           (String e) => DropdownMenuItem<String>(
-                        value: e,
-                        child: Text(e),
-                      ),
-                    )
+                            value: e,
+                            child: Text(e),
+                          ),
+                        )
                         .toList(),
                     value: 'A型',
                     onChanged: (value) {
                       print(value);
                     },
                   ),
-                  const SizedBox(width: 30,),
+                  const SizedBox(
+                    width: 30,
+                  ),
                 ],
               ),
               TextFormField(
                 maxLines: null,
                 maxLength: 200,
                 decoration: const InputDecoration(hintText: '1位'),
+                keyboardType: TextInputType.multiline,
               ),
               TextFormField(
                 maxLines: null,
                 maxLength: 200,
                 decoration: const InputDecoration(hintText: '2位'),
+                keyboardType: TextInputType.multiline,
               ),
               TextFormField(
                 maxLines: null,
                 maxLength: 200,
                 decoration: const InputDecoration(hintText: '3位'),
+                keyboardType: TextInputType.multiline,
               ),
               TextFormField(
                 maxLines: null,
                 maxLength: 200,
                 decoration: const InputDecoration(hintText: '4位'),
+                keyboardType: TextInputType.multiline,
               ),
-              const SizedBox(height: 20,),
+              const SizedBox(
+                height: 20,
+              ),
               OutlinedButton.icon(
                 onPressed: () {},
                 label: const Text('出力'),
