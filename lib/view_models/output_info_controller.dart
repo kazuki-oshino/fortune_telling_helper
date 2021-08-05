@@ -2,7 +2,7 @@ import 'dart:io';
 import 'dart:math';
 
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:path_provider/path_provider.dart';
+import 'package:mustache_template/mustache.dart';
 import 'package:tarot_blood_type/common/common.dart';
 import 'package:tarot_blood_type/models/entities/tarot_result.dart';
 import 'package:tarot_blood_type/models/states/output_info_state.dart';
@@ -119,17 +119,29 @@ class OutputInfoController extends StateNotifier<OutputInfoState> {
   }
 
   Future<void> outputFortuneTelling() async {
-    var fileName = state.targetDate??'';
-    fileName = fileName.replaceAll('/', '').replaceAll('(', '').replaceAll(')', '');
+    var fileName = state.targetDate ?? '';
+    fileName =
+        fileName.replaceAll('/', '').replaceAll('(', '').replaceAll(')', '');
     final logPath = '/Users/kazuki/blog/uranai/$fileName.txt';
     final file = File(logPath);
-    final write = state.firstDescription??'';
+    final write = _makeBody();
 
     await file.writeAsString(write);
   }
 
-
-
-
-
+  String _makeBody() {
+    final t = Template(outputTemplate);
+    final output = t.renderString({
+      'targetDate': state.targetDate,
+      'fourthResult': state.fourthBloodType,
+      'fourthDescription': state.fourthDescription,
+      'thirdResult': state.thirdBloodType,
+      'thirdDescription': state.thirdDescription,
+      'secondResult': state.secondBloodType,
+      'secondDescription': state.secondDescription,
+      'firstResult': state.firstBloodType,
+      'firstDescription': state.firstDescription,
+    });
+    return output;
+  }
 }

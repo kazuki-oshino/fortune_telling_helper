@@ -182,19 +182,21 @@ class MainPage extends HookWidget {
                 maxLength: 200,
                 decoration: const InputDecoration(hintText: '2位'),
                 keyboardType: TextInputType.multiline,
-
+                onChanged: notifier.saveSecondDescription,
               ),
               TextFormField(
                 maxLines: null,
                 maxLength: 200,
                 decoration: const InputDecoration(hintText: '3位'),
                 keyboardType: TextInputType.multiline,
+                onChanged: notifier.saveThirdDescription,
               ),
               TextFormField(
                 maxLines: null,
                 maxLength: 200,
                 decoration: const InputDecoration(hintText: '4位'),
                 keyboardType: TextInputType.multiline,
+                onChanged: notifier.saveFourthDescription,
               ),
               const SizedBox(
                 height: 20,
