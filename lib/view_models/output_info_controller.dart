@@ -7,10 +7,10 @@ import 'package:tarot_blood_type/models/states/output_info_state.dart';
 
 final outputInfoProvider =
     StateNotifierProvider<OutputInfoController, OutputInfoState>(
-        (ref) => OutputInfoController(ref.read));
+        (ref) => OutputInfoController());
 
 class OutputInfoController extends StateNotifier<OutputInfoState> {
-  OutputInfoController(this._reader) : super(OutputInfoState(
+  OutputInfoController() : super(OutputInfoState(
     firstBloodType: bloodTypeList[0],
     secondBloodType: bloodTypeList[1],
     thirdBloodType: bloodTypeList[2],
@@ -95,5 +95,4 @@ class OutputInfoController extends StateNotifier<OutputInfoState> {
     state = state.copyWith(fourthBloodType: selected);
   }
 
-  final Reader _reader;
 }
