@@ -76,11 +76,19 @@ class MainPage extends HookWidget {
               ),
 
               // 出力情報入力
-              TextFormField(
-                maxLines: null,
-                maxLength: 200,
-                decoration: const InputDecoration(hintText: '日付'),
-                onChanged: notifier.saveTargetDate,
+              Row(
+                children: [
+                  Text(notifier.targetDate),
+                  OutlinedButton.icon(
+                    onPressed: () async {
+                      final dateTime =
+                          await _selectDate(context, state.targetDate);
+                      notifier.saveTargetDate(dateTime);
+                    },
+                    label: const Text('datepicker'),
+                    icon: const Icon(Icons.create_outlined),
+                  ),
+                ],
               ),
               Row(
                 children: [
@@ -206,11 +214,24 @@ class MainPage extends HookWidget {
                 label: const Text('出力'),
                 icon: const Icon(Icons.create_outlined),
               ),
-              Text(state.targetDate??'null'),
             ],
           ),
         ),
       ),
     );
+  }
+
+  Future<DateTime> _selectDate(
+      BuildContext context, DateTime? targetDate) async {
+    final picked = await showDatePicker(
+        context: context,
+        initialDate: targetDate ?? DateTime.now().add(const Duration(days: 1)),
+        firstDate: DateTime(2016),
+        lastDate: DateTime.now().add(const Duration(days: 360)));
+    if (picked != null) {
+      return picked;
+    } else {
+      return targetDate ?? DateTime.now().add(const Duration(days: 1));
+    }
   }
 }

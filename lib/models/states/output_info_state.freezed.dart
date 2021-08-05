@@ -18,7 +18,7 @@ class _$OutputInfoStateTearOff {
 
   _OutputInfoState call(
       {Map<BloodType, TarotResult>? tarotResults,
-      String? targetDate,
+      DateTime? targetDate,
       String? firstBloodType,
       String? secondBloodType,
       String? thirdBloodType,
@@ -49,7 +49,7 @@ const $OutputInfoState = _$OutputInfoStateTearOff();
 mixin _$OutputInfoState {
   Map<BloodType, TarotResult>? get tarotResults =>
       throw _privateConstructorUsedError;
-  String? get targetDate => throw _privateConstructorUsedError;
+  DateTime? get targetDate => throw _privateConstructorUsedError;
   String? get firstBloodType => throw _privateConstructorUsedError;
   String? get secondBloodType => throw _privateConstructorUsedError;
   String? get thirdBloodType => throw _privateConstructorUsedError;
@@ -71,7 +71,7 @@ abstract class $OutputInfoStateCopyWith<$Res> {
       _$OutputInfoStateCopyWithImpl<$Res>;
   $Res call(
       {Map<BloodType, TarotResult>? tarotResults,
-      String? targetDate,
+      DateTime? targetDate,
       String? firstBloodType,
       String? secondBloodType,
       String? thirdBloodType,
@@ -112,7 +112,7 @@ class _$OutputInfoStateCopyWithImpl<$Res>
       targetDate: targetDate == freezed
           ? _value.targetDate
           : targetDate // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as DateTime?,
       firstBloodType: firstBloodType == freezed
           ? _value.firstBloodType
           : firstBloodType // ignore: cast_nullable_to_non_nullable
@@ -158,7 +158,7 @@ abstract class _$OutputInfoStateCopyWith<$Res>
   @override
   $Res call(
       {Map<BloodType, TarotResult>? tarotResults,
-      String? targetDate,
+      DateTime? targetDate,
       String? firstBloodType,
       String? secondBloodType,
       String? thirdBloodType,
@@ -201,7 +201,7 @@ class __$OutputInfoStateCopyWithImpl<$Res>
       targetDate: targetDate == freezed
           ? _value.targetDate
           : targetDate // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as DateTime?,
       firstBloodType: firstBloodType == freezed
           ? _value.firstBloodType
           : firstBloodType // ignore: cast_nullable_to_non_nullable
@@ -258,7 +258,7 @@ class _$_OutputInfoState
   @override
   final Map<BloodType, TarotResult>? tarotResults;
   @override
-  final String? targetDate;
+  final DateTime? targetDate;
   @override
   final String? firstBloodType;
   @override
@@ -357,7 +357,7 @@ class _$_OutputInfoState
 abstract class _OutputInfoState implements OutputInfoState {
   const factory _OutputInfoState(
       {Map<BloodType, TarotResult>? tarotResults,
-      String? targetDate,
+      DateTime? targetDate,
       String? firstBloodType,
       String? secondBloodType,
       String? thirdBloodType,
@@ -371,7 +371,7 @@ abstract class _OutputInfoState implements OutputInfoState {
   Map<BloodType, TarotResult>? get tarotResults =>
       throw _privateConstructorUsedError;
   @override
-  String? get targetDate => throw _privateConstructorUsedError;
+  DateTime? get targetDate => throw _privateConstructorUsedError;
   @override
   String? get firstBloodType => throw _privateConstructorUsedError;
   @override
