@@ -95,9 +95,9 @@ class MainPage extends HookWidget {
                           ),
                         )
                         .toList(),
-                    value: 'A型',
+                    value: state.firstBloodType,
                     onChanged: (value) {
-                      print(value);
+                      notifier.changeFirstBloodType(value.toString());
                     },
                   ),
                   const SizedBox(
@@ -116,9 +116,9 @@ class MainPage extends HookWidget {
                           ),
                         )
                         .toList(),
-                    value: 'A型',
+                    value: state.secondBloodType,
                     onChanged: (value) {
-                      print(value);
+                      notifier.changeSecondBloodType(value.toString());
                     },
                   ),
                   const SizedBox(
@@ -137,9 +137,9 @@ class MainPage extends HookWidget {
                           ),
                         )
                         .toList(),
-                    value: 'A型',
+                    value: state.thirdBloodType,
                     onChanged: (value) {
-                      print(value);
+                      notifier.changeThirdBloodType(value.toString());
                     },
                   ),
                   const SizedBox(
@@ -158,9 +158,9 @@ class MainPage extends HookWidget {
                           ),
                         )
                         .toList(),
-                    value: 'A型',
+                    value: state.fourthBloodType,
                     onChanged: (value) {
-                      print(value);
+                      notifier.changeFourthBloodType(value.toString());
                     },
                   ),
                   const SizedBox(

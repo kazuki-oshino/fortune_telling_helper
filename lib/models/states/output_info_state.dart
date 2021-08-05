@@ -12,10 +12,10 @@ class OutputInfoState with _$OutputInfoState {
     String? firstBloodType,
     String? secondBloodType,
     String? thirdBloodType,
-    String? forthBloodType,
+    String? fourthBloodType,
     String? firstDescription,
     String? secondDescription,
     String? thirdDescription,
-    String? forthDescription,
+    String? fourthDescription,
   }) = _OutputInfoState;
 }

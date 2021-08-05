@@ -10,7 +10,12 @@ final outputInfoProvider =
         (ref) => OutputInfoController(ref.read));
 
 class OutputInfoController extends StateNotifier<OutputInfoState> {
-  OutputInfoController(this._reader) : super(const OutputInfoState());
+  OutputInfoController(this._reader) : super(OutputInfoState(
+    firstBloodType: bloodTypeList[0],
+    secondBloodType: bloodTypeList[1],
+    thirdBloodType: bloodTypeList[2],
+    fourthBloodType: bloodTypeList[3],
+  ));
 
   String get typeAResult => state.tarotResults?[BloodType.typeA]?.result ?? '';
 
@@ -60,6 +65,34 @@ class OutputInfoController extends StateNotifier<OutputInfoState> {
       res = '$resの逆位置';
     }
     return res;
+  }
+
+  void changeFirstBloodType(String selected) {
+    if (!bloodTypeList.contains(selected)) {
+      return;
+    }
+    state = state.copyWith(firstBloodType: selected);
+  }
+
+  void changeSecondBloodType(String selected) {
+    if (!bloodTypeList.contains(selected)) {
+      return;
+    }
+    state = state.copyWith(secondBloodType: selected);
+  }
+
+  void changeThirdBloodType(String selected) {
+    if (!bloodTypeList.contains(selected)) {
+      return;
+    }
+    state = state.copyWith(thirdBloodType: selected);
+  }
+
+  void changeFourthBloodType(String selected) {
+    if (!bloodTypeList.contains(selected)) {
+      return;
+    }
+    state = state.copyWith(fourthBloodType: selected);
   }
 
   final Reader _reader;
