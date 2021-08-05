@@ -18,6 +18,7 @@ class _$OutputInfoStateTearOff {
 
   _OutputInfoState call(
       {Map<BloodType, TarotResult>? tarotResults,
+      String? targetDate,
       String? firstBloodType,
       String? secondBloodType,
       String? thirdBloodType,
@@ -28,6 +29,7 @@ class _$OutputInfoStateTearOff {
       String? fourthDescription}) {
     return _OutputInfoState(
       tarotResults: tarotResults,
+      targetDate: targetDate,
       firstBloodType: firstBloodType,
       secondBloodType: secondBloodType,
       thirdBloodType: thirdBloodType,
@@ -47,6 +49,7 @@ const $OutputInfoState = _$OutputInfoStateTearOff();
 mixin _$OutputInfoState {
   Map<BloodType, TarotResult>? get tarotResults =>
       throw _privateConstructorUsedError;
+  String? get targetDate => throw _privateConstructorUsedError;
   String? get firstBloodType => throw _privateConstructorUsedError;
   String? get secondBloodType => throw _privateConstructorUsedError;
   String? get thirdBloodType => throw _privateConstructorUsedError;
@@ -68,6 +71,7 @@ abstract class $OutputInfoStateCopyWith<$Res> {
       _$OutputInfoStateCopyWithImpl<$Res>;
   $Res call(
       {Map<BloodType, TarotResult>? tarotResults,
+      String? targetDate,
       String? firstBloodType,
       String? secondBloodType,
       String? thirdBloodType,
@@ -90,6 +94,7 @@ class _$OutputInfoStateCopyWithImpl<$Res>
   @override
   $Res call({
     Object? tarotResults = freezed,
+    Object? targetDate = freezed,
     Object? firstBloodType = freezed,
     Object? secondBloodType = freezed,
     Object? thirdBloodType = freezed,
@@ -104,6 +109,10 @@ class _$OutputInfoStateCopyWithImpl<$Res>
           ? _value.tarotResults
           : tarotResults // ignore: cast_nullable_to_non_nullable
               as Map<BloodType, TarotResult>?,
+      targetDate: targetDate == freezed
+          ? _value.targetDate
+          : targetDate // ignore: cast_nullable_to_non_nullable
+              as String?,
       firstBloodType: firstBloodType == freezed
           ? _value.firstBloodType
           : firstBloodType // ignore: cast_nullable_to_non_nullable
@@ -149,6 +158,7 @@ abstract class _$OutputInfoStateCopyWith<$Res>
   @override
   $Res call(
       {Map<BloodType, TarotResult>? tarotResults,
+      String? targetDate,
       String? firstBloodType,
       String? secondBloodType,
       String? thirdBloodType,
@@ -173,6 +183,7 @@ class __$OutputInfoStateCopyWithImpl<$Res>
   @override
   $Res call({
     Object? tarotResults = freezed,
+    Object? targetDate = freezed,
     Object? firstBloodType = freezed,
     Object? secondBloodType = freezed,
     Object? thirdBloodType = freezed,
@@ -187,6 +198,10 @@ class __$OutputInfoStateCopyWithImpl<$Res>
           ? _value.tarotResults
           : tarotResults // ignore: cast_nullable_to_non_nullable
               as Map<BloodType, TarotResult>?,
+      targetDate: targetDate == freezed
+          ? _value.targetDate
+          : targetDate // ignore: cast_nullable_to_non_nullable
+              as String?,
       firstBloodType: firstBloodType == freezed
           ? _value.firstBloodType
           : firstBloodType // ignore: cast_nullable_to_non_nullable
@@ -230,6 +245,7 @@ class _$_OutputInfoState
     implements _OutputInfoState {
   const _$_OutputInfoState(
       {this.tarotResults,
+      this.targetDate,
       this.firstBloodType,
       this.secondBloodType,
       this.thirdBloodType,
@@ -241,6 +257,8 @@ class _$_OutputInfoState
 
   @override
   final Map<BloodType, TarotResult>? tarotResults;
+  @override
+  final String? targetDate;
   @override
   final String? firstBloodType;
   @override
@@ -260,7 +278,7 @@ class _$_OutputInfoState
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'OutputInfoState(tarotResults: $tarotResults, firstBloodType: $firstBloodType, secondBloodType: $secondBloodType, thirdBloodType: $thirdBloodType, fourthBloodType: $fourthBloodType, firstDescription: $firstDescription, secondDescription: $secondDescription, thirdDescription: $thirdDescription, fourthDescription: $fourthDescription)';
+    return 'OutputInfoState(tarotResults: $tarotResults, targetDate: $targetDate, firstBloodType: $firstBloodType, secondBloodType: $secondBloodType, thirdBloodType: $thirdBloodType, fourthBloodType: $fourthBloodType, firstDescription: $firstDescription, secondDescription: $secondDescription, thirdDescription: $thirdDescription, fourthDescription: $fourthDescription)';
   }
 
   @override
@@ -269,6 +287,7 @@ class _$_OutputInfoState
     properties
       ..add(DiagnosticsProperty('type', 'OutputInfoState'))
       ..add(DiagnosticsProperty('tarotResults', tarotResults))
+      ..add(DiagnosticsProperty('targetDate', targetDate))
       ..add(DiagnosticsProperty('firstBloodType', firstBloodType))
       ..add(DiagnosticsProperty('secondBloodType', secondBloodType))
       ..add(DiagnosticsProperty('thirdBloodType', thirdBloodType))
@@ -286,6 +305,9 @@ class _$_OutputInfoState
             (identical(other.tarotResults, tarotResults) ||
                 const DeepCollectionEquality()
                     .equals(other.tarotResults, tarotResults)) &&
+            (identical(other.targetDate, targetDate) ||
+                const DeepCollectionEquality()
+                    .equals(other.targetDate, targetDate)) &&
             (identical(other.firstBloodType, firstBloodType) ||
                 const DeepCollectionEquality()
                     .equals(other.firstBloodType, firstBloodType)) &&
@@ -316,6 +338,7 @@ class _$_OutputInfoState
   int get hashCode =>
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(tarotResults) ^
+      const DeepCollectionEquality().hash(targetDate) ^
       const DeepCollectionEquality().hash(firstBloodType) ^
       const DeepCollectionEquality().hash(secondBloodType) ^
       const DeepCollectionEquality().hash(thirdBloodType) ^
@@ -334,6 +357,7 @@ class _$_OutputInfoState
 abstract class _OutputInfoState implements OutputInfoState {
   const factory _OutputInfoState(
       {Map<BloodType, TarotResult>? tarotResults,
+      String? targetDate,
       String? firstBloodType,
       String? secondBloodType,
       String? thirdBloodType,
@@ -346,6 +370,8 @@ abstract class _OutputInfoState implements OutputInfoState {
   @override
   Map<BloodType, TarotResult>? get tarotResults =>
       throw _privateConstructorUsedError;
+  @override
+  String? get targetDate => throw _privateConstructorUsedError;
   @override
   String? get firstBloodType => throw _privateConstructorUsedError;
   @override
