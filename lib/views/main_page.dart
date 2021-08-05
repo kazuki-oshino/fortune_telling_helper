@@ -12,6 +12,7 @@ class MainPage extends HookWidget {
   Widget build(BuildContext context) {
     final state = useProvider(outputInfoProvider);
     final notifier = useProvider(outputInfoProvider.notifier);
+
     return Scaffold(
       appBar: AppBar(
         title: const Text('神'),
@@ -79,6 +80,7 @@ class MainPage extends HookWidget {
                 maxLines: null,
                 maxLength: 200,
                 decoration: const InputDecoration(hintText: '日付'),
+                onChanged: notifier.saveTargetDate,
               ),
               Row(
                 children: [
@@ -173,12 +175,14 @@ class MainPage extends HookWidget {
                 maxLength: 200,
                 decoration: const InputDecoration(hintText: '1位'),
                 keyboardType: TextInputType.multiline,
+                onChanged: notifier.saveFirstDescription,
               ),
               TextFormField(
                 maxLines: null,
                 maxLength: 200,
                 decoration: const InputDecoration(hintText: '2位'),
                 keyboardType: TextInputType.multiline,
+
               ),
               TextFormField(
                 maxLines: null,
@@ -196,10 +200,11 @@ class MainPage extends HookWidget {
                 height: 20,
               ),
               OutlinedButton.icon(
-                onPressed: () {},
+                onPressed: notifier.outputFortuneTelling,
                 label: const Text('出力'),
                 icon: const Icon(Icons.create_outlined),
               ),
+              Text(state.targetDate??'null'),
             ],
           ),
         ),

@@ -1,7 +1,9 @@
+import 'dart:io';
 import 'dart:math';
 
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:tarot_blood_type/common/constants.dart';
+import 'package:path_provider/path_provider.dart';
+import 'package:tarot_blood_type/common/common.dart';
 import 'package:tarot_blood_type/models/entities/tarot_result.dart';
 import 'package:tarot_blood_type/models/states/output_info_state.dart';
 
@@ -10,12 +12,13 @@ final outputInfoProvider =
         (ref) => OutputInfoController());
 
 class OutputInfoController extends StateNotifier<OutputInfoState> {
-  OutputInfoController() : super(OutputInfoState(
-    firstBloodType: bloodTypeList[0],
-    secondBloodType: bloodTypeList[1],
-    thirdBloodType: bloodTypeList[2],
-    fourthBloodType: bloodTypeList[3],
-  ));
+  OutputInfoController()
+      : super(OutputInfoState(
+          firstBloodType: bloodTypeList[0],
+          secondBloodType: bloodTypeList[1],
+          thirdBloodType: bloodTypeList[2],
+          fourthBloodType: bloodTypeList[3],
+        ));
 
   String get typeAResult => state.tarotResults?[BloodType.typeA]?.result ?? '';
 
@@ -94,5 +97,39 @@ class OutputInfoController extends StateNotifier<OutputInfoState> {
     }
     state = state.copyWith(fourthBloodType: selected);
   }
+
+  void saveTargetDate(String val) {
+    state = state.copyWith(targetDate: val);
+  }
+
+  void saveFirstDescription(String val) {
+    state = state.copyWith(firstDescription: val);
+  }
+
+  void saveSecondDescription(String val) {
+    state = state.copyWith(secondDescription: val);
+  }
+
+  void saveThirdDescription(String val) {
+    state = state.copyWith(thirdDescription: val);
+  }
+
+  void saveFourthDescription(String val) {
+    state = state.copyWith(fourthDescription: val);
+  }
+
+  Future<void> outputFortuneTelling() async {
+    var fileName = state.targetDate??'';
+    fileName = fileName.replaceAll('/', '').replaceAll('(', '').replaceAll(')', '');
+    final logPath = '/Users/kazuki/blog/uranai/$fileName.txt';
+    final file = File(logPath);
+    final write = state.firstDescription??'';
+
+    await file.writeAsString(write);
+  }
+
+
+
+
 
 }
