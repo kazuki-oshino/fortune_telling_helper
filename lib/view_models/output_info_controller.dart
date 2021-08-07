@@ -118,20 +118,20 @@ class OutputInfoController extends StateNotifier<OutputInfoState> {
     state = state.copyWith(targetDate: val);
   }
 
-  void saveFirstDescription(String val) {
-    state = state.copyWith(firstDescription: val);
+  void saveTypeADescription(String val) {
+    state = state.copyWith(typeADescription: val);
   }
 
-  void saveSecondDescription(String val) {
-    state = state.copyWith(secondDescription: val);
+  void saveTypeBDescription(String val) {
+    state = state.copyWith(typeBDescription: val);
   }
 
-  void saveThirdDescription(String val) {
-    state = state.copyWith(thirdDescription: val);
+  void saveTypeODescription(String val) {
+    state = state.copyWith(typeODescription: val);
   }
 
-  void saveFourthDescription(String val) {
-    state = state.copyWith(fourthDescription: val);
+  void saveTypeABDescription(String val) {
+    state = state.copyWith(typeABDescription: val);
   }
 
   Future<void> outputFortuneTelling() async {
@@ -148,18 +148,48 @@ class OutputInfoController extends StateNotifier<OutputInfoState> {
     final dateTime =
         state.targetDate ?? DateTime.now().add(const Duration(days: 365));
     final targetDate = DateFormat('yyyy/M/d(E)', 'ja_JP').format(dateTime);
+
+    final fourthDescription = _getRankingDescription(4);
+    final thirdDescription = _getRankingDescription(3);
+    final secondDescription = _getRankingDescription(2);
+    final firstDescription = _getRankingDescription(1);
+
     final t = Template(outputTemplate);
     final output = t.renderString({
       'targetDate': targetDate,
       'fourthResult': state.fourthBloodType,
-      'fourthDescription': state.fourthDescription,
+      'fourthDescription': fourthDescription,
       'thirdResult': state.thirdBloodType,
-      'thirdDescription': state.thirdDescription,
+      'thirdDescription': thirdDescription,
       'secondResult': state.secondBloodType,
-      'secondDescription': state.secondDescription,
+      'secondDescription': secondDescription,
       'firstResult': state.firstBloodType,
-      'firstDescription': state.firstDescription,
+      'firstDescription': firstDescription,
     });
     return output;
+  }
+
+
+  String _getRankingDescription(int rank) {
+    var rankStr = 'A型';
+    if (rank == 4) {
+      rankStr = state.fourthBloodType??'A型';
+    } else if(rank == 3) {
+      rankStr = state.thirdBloodType??'A型';
+    } else if(rank == 2) {
+      rankStr = state.secondBloodType??'A型';
+    } else {
+      rankStr = state.firstBloodType??'A型';
+    }
+
+    if (rankStr == 'A型') {
+      return state.typeADescription??'';
+    } else if (rankStr == 'B型') {
+      return state.typeBDescription??'';
+    } else if (rankStr == 'O型') {
+      return state.typeODescription??'';
+    } else {
+      return state.typeABDescription??'';
+    }
   }
 }

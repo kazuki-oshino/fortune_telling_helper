@@ -23,10 +23,10 @@ class _$OutputInfoStateTearOff {
       String? secondBloodType,
       String? thirdBloodType,
       String? fourthBloodType,
-      String? firstDescription,
-      String? secondDescription,
-      String? thirdDescription,
-      String? fourthDescription}) {
+      String? typeADescription,
+      String? typeBDescription,
+      String? typeODescription,
+      String? typeABDescription}) {
     return _OutputInfoState(
       tarotResults: tarotResults,
       targetDate: targetDate,
@@ -34,10 +34,10 @@ class _$OutputInfoStateTearOff {
       secondBloodType: secondBloodType,
       thirdBloodType: thirdBloodType,
       fourthBloodType: fourthBloodType,
-      firstDescription: firstDescription,
-      secondDescription: secondDescription,
-      thirdDescription: thirdDescription,
-      fourthDescription: fourthDescription,
+      typeADescription: typeADescription,
+      typeBDescription: typeBDescription,
+      typeODescription: typeODescription,
+      typeABDescription: typeABDescription,
     );
   }
 }
@@ -54,10 +54,10 @@ mixin _$OutputInfoState {
   String? get secondBloodType => throw _privateConstructorUsedError;
   String? get thirdBloodType => throw _privateConstructorUsedError;
   String? get fourthBloodType => throw _privateConstructorUsedError;
-  String? get firstDescription => throw _privateConstructorUsedError;
-  String? get secondDescription => throw _privateConstructorUsedError;
-  String? get thirdDescription => throw _privateConstructorUsedError;
-  String? get fourthDescription => throw _privateConstructorUsedError;
+  String? get typeADescription => throw _privateConstructorUsedError;
+  String? get typeBDescription => throw _privateConstructorUsedError;
+  String? get typeODescription => throw _privateConstructorUsedError;
+  String? get typeABDescription => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $OutputInfoStateCopyWith<OutputInfoState> get copyWith =>
@@ -76,10 +76,10 @@ abstract class $OutputInfoStateCopyWith<$Res> {
       String? secondBloodType,
       String? thirdBloodType,
       String? fourthBloodType,
-      String? firstDescription,
-      String? secondDescription,
-      String? thirdDescription,
-      String? fourthDescription});
+      String? typeADescription,
+      String? typeBDescription,
+      String? typeODescription,
+      String? typeABDescription});
 }
 
 /// @nodoc
@@ -99,10 +99,10 @@ class _$OutputInfoStateCopyWithImpl<$Res>
     Object? secondBloodType = freezed,
     Object? thirdBloodType = freezed,
     Object? fourthBloodType = freezed,
-    Object? firstDescription = freezed,
-    Object? secondDescription = freezed,
-    Object? thirdDescription = freezed,
-    Object? fourthDescription = freezed,
+    Object? typeADescription = freezed,
+    Object? typeBDescription = freezed,
+    Object? typeODescription = freezed,
+    Object? typeABDescription = freezed,
   }) {
     return _then(_value.copyWith(
       tarotResults: tarotResults == freezed
@@ -129,21 +129,21 @@ class _$OutputInfoStateCopyWithImpl<$Res>
           ? _value.fourthBloodType
           : fourthBloodType // ignore: cast_nullable_to_non_nullable
               as String?,
-      firstDescription: firstDescription == freezed
-          ? _value.firstDescription
-          : firstDescription // ignore: cast_nullable_to_non_nullable
+      typeADescription: typeADescription == freezed
+          ? _value.typeADescription
+          : typeADescription // ignore: cast_nullable_to_non_nullable
               as String?,
-      secondDescription: secondDescription == freezed
-          ? _value.secondDescription
-          : secondDescription // ignore: cast_nullable_to_non_nullable
+      typeBDescription: typeBDescription == freezed
+          ? _value.typeBDescription
+          : typeBDescription // ignore: cast_nullable_to_non_nullable
               as String?,
-      thirdDescription: thirdDescription == freezed
-          ? _value.thirdDescription
-          : thirdDescription // ignore: cast_nullable_to_non_nullable
+      typeODescription: typeODescription == freezed
+          ? _value.typeODescription
+          : typeODescription // ignore: cast_nullable_to_non_nullable
               as String?,
-      fourthDescription: fourthDescription == freezed
-          ? _value.fourthDescription
-          : fourthDescription // ignore: cast_nullable_to_non_nullable
+      typeABDescription: typeABDescription == freezed
+          ? _value.typeABDescription
+          : typeABDescription // ignore: cast_nullable_to_non_nullable
               as String?,
     ));
   }
@@ -163,10 +163,10 @@ abstract class _$OutputInfoStateCopyWith<$Res>
       String? secondBloodType,
       String? thirdBloodType,
       String? fourthBloodType,
-      String? firstDescription,
-      String? secondDescription,
-      String? thirdDescription,
-      String? fourthDescription});
+      String? typeADescription,
+      String? typeBDescription,
+      String? typeODescription,
+      String? typeABDescription});
 }
 
 /// @nodoc
@@ -188,10 +188,10 @@ class __$OutputInfoStateCopyWithImpl<$Res>
     Object? secondBloodType = freezed,
     Object? thirdBloodType = freezed,
     Object? fourthBloodType = freezed,
-    Object? firstDescription = freezed,
-    Object? secondDescription = freezed,
-    Object? thirdDescription = freezed,
-    Object? fourthDescription = freezed,
+    Object? typeADescription = freezed,
+    Object? typeBDescription = freezed,
+    Object? typeODescription = freezed,
+    Object? typeABDescription = freezed,
   }) {
     return _then(_OutputInfoState(
       tarotResults: tarotResults == freezed
@@ -218,21 +218,21 @@ class __$OutputInfoStateCopyWithImpl<$Res>
           ? _value.fourthBloodType
           : fourthBloodType // ignore: cast_nullable_to_non_nullable
               as String?,
-      firstDescription: firstDescription == freezed
-          ? _value.firstDescription
-          : firstDescription // ignore: cast_nullable_to_non_nullable
+      typeADescription: typeADescription == freezed
+          ? _value.typeADescription
+          : typeADescription // ignore: cast_nullable_to_non_nullable
               as String?,
-      secondDescription: secondDescription == freezed
-          ? _value.secondDescription
-          : secondDescription // ignore: cast_nullable_to_non_nullable
+      typeBDescription: typeBDescription == freezed
+          ? _value.typeBDescription
+          : typeBDescription // ignore: cast_nullable_to_non_nullable
               as String?,
-      thirdDescription: thirdDescription == freezed
-          ? _value.thirdDescription
-          : thirdDescription // ignore: cast_nullable_to_non_nullable
+      typeODescription: typeODescription == freezed
+          ? _value.typeODescription
+          : typeODescription // ignore: cast_nullable_to_non_nullable
               as String?,
-      fourthDescription: fourthDescription == freezed
-          ? _value.fourthDescription
-          : fourthDescription // ignore: cast_nullable_to_non_nullable
+      typeABDescription: typeABDescription == freezed
+          ? _value.typeABDescription
+          : typeABDescription // ignore: cast_nullable_to_non_nullable
               as String?,
     ));
   }
@@ -250,10 +250,10 @@ class _$_OutputInfoState
       this.secondBloodType,
       this.thirdBloodType,
       this.fourthBloodType,
-      this.firstDescription,
-      this.secondDescription,
-      this.thirdDescription,
-      this.fourthDescription});
+      this.typeADescription,
+      this.typeBDescription,
+      this.typeODescription,
+      this.typeABDescription});
 
   @override
   final Map<BloodType, TarotResult>? tarotResults;
@@ -268,17 +268,17 @@ class _$_OutputInfoState
   @override
   final String? fourthBloodType;
   @override
-  final String? firstDescription;
+  final String? typeADescription;
   @override
-  final String? secondDescription;
+  final String? typeBDescription;
   @override
-  final String? thirdDescription;
+  final String? typeODescription;
   @override
-  final String? fourthDescription;
+  final String? typeABDescription;
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'OutputInfoState(tarotResults: $tarotResults, targetDate: $targetDate, firstBloodType: $firstBloodType, secondBloodType: $secondBloodType, thirdBloodType: $thirdBloodType, fourthBloodType: $fourthBloodType, firstDescription: $firstDescription, secondDescription: $secondDescription, thirdDescription: $thirdDescription, fourthDescription: $fourthDescription)';
+    return 'OutputInfoState(tarotResults: $tarotResults, targetDate: $targetDate, firstBloodType: $firstBloodType, secondBloodType: $secondBloodType, thirdBloodType: $thirdBloodType, fourthBloodType: $fourthBloodType, typeADescription: $typeADescription, typeBDescription: $typeBDescription, typeODescription: $typeODescription, typeABDescription: $typeABDescription)';
   }
 
   @override
@@ -292,10 +292,10 @@ class _$_OutputInfoState
       ..add(DiagnosticsProperty('secondBloodType', secondBloodType))
       ..add(DiagnosticsProperty('thirdBloodType', thirdBloodType))
       ..add(DiagnosticsProperty('fourthBloodType', fourthBloodType))
-      ..add(DiagnosticsProperty('firstDescription', firstDescription))
-      ..add(DiagnosticsProperty('secondDescription', secondDescription))
-      ..add(DiagnosticsProperty('thirdDescription', thirdDescription))
-      ..add(DiagnosticsProperty('fourthDescription', fourthDescription));
+      ..add(DiagnosticsProperty('typeADescription', typeADescription))
+      ..add(DiagnosticsProperty('typeBDescription', typeBDescription))
+      ..add(DiagnosticsProperty('typeODescription', typeODescription))
+      ..add(DiagnosticsProperty('typeABDescription', typeABDescription));
   }
 
   @override
@@ -320,18 +320,18 @@ class _$_OutputInfoState
             (identical(other.fourthBloodType, fourthBloodType) ||
                 const DeepCollectionEquality()
                     .equals(other.fourthBloodType, fourthBloodType)) &&
-            (identical(other.firstDescription, firstDescription) ||
+            (identical(other.typeADescription, typeADescription) ||
                 const DeepCollectionEquality()
-                    .equals(other.firstDescription, firstDescription)) &&
-            (identical(other.secondDescription, secondDescription) ||
+                    .equals(other.typeADescription, typeADescription)) &&
+            (identical(other.typeBDescription, typeBDescription) ||
                 const DeepCollectionEquality()
-                    .equals(other.secondDescription, secondDescription)) &&
-            (identical(other.thirdDescription, thirdDescription) ||
+                    .equals(other.typeBDescription, typeBDescription)) &&
+            (identical(other.typeODescription, typeODescription) ||
                 const DeepCollectionEquality()
-                    .equals(other.thirdDescription, thirdDescription)) &&
-            (identical(other.fourthDescription, fourthDescription) ||
+                    .equals(other.typeODescription, typeODescription)) &&
+            (identical(other.typeABDescription, typeABDescription) ||
                 const DeepCollectionEquality()
-                    .equals(other.fourthDescription, fourthDescription)));
+                    .equals(other.typeABDescription, typeABDescription)));
   }
 
   @override
@@ -343,10 +343,10 @@ class _$_OutputInfoState
       const DeepCollectionEquality().hash(secondBloodType) ^
       const DeepCollectionEquality().hash(thirdBloodType) ^
       const DeepCollectionEquality().hash(fourthBloodType) ^
-      const DeepCollectionEquality().hash(firstDescription) ^
-      const DeepCollectionEquality().hash(secondDescription) ^
-      const DeepCollectionEquality().hash(thirdDescription) ^
-      const DeepCollectionEquality().hash(fourthDescription);
+      const DeepCollectionEquality().hash(typeADescription) ^
+      const DeepCollectionEquality().hash(typeBDescription) ^
+      const DeepCollectionEquality().hash(typeODescription) ^
+      const DeepCollectionEquality().hash(typeABDescription);
 
   @JsonKey(ignore: true)
   @override
@@ -362,10 +362,10 @@ abstract class _OutputInfoState implements OutputInfoState {
       String? secondBloodType,
       String? thirdBloodType,
       String? fourthBloodType,
-      String? firstDescription,
-      String? secondDescription,
-      String? thirdDescription,
-      String? fourthDescription}) = _$_OutputInfoState;
+      String? typeADescription,
+      String? typeBDescription,
+      String? typeODescription,
+      String? typeABDescription}) = _$_OutputInfoState;
 
   @override
   Map<BloodType, TarotResult>? get tarotResults =>
@@ -381,13 +381,13 @@ abstract class _OutputInfoState implements OutputInfoState {
   @override
   String? get fourthBloodType => throw _privateConstructorUsedError;
   @override
-  String? get firstDescription => throw _privateConstructorUsedError;
+  String? get typeADescription => throw _privateConstructorUsedError;
   @override
-  String? get secondDescription => throw _privateConstructorUsedError;
+  String? get typeBDescription => throw _privateConstructorUsedError;
   @override
-  String? get thirdDescription => throw _privateConstructorUsedError;
+  String? get typeODescription => throw _privateConstructorUsedError;
   @override
-  String? get fourthDescription => throw _privateConstructorUsedError;
+  String? get typeABDescription => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$OutputInfoStateCopyWith<_OutputInfoState> get copyWith =>
