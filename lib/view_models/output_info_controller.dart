@@ -148,6 +148,7 @@ class OutputInfoController extends StateNotifier<OutputInfoState> {
     final dateTime =
         state.targetDate ?? DateTime.now().add(const Duration(days: 365));
     final targetDate = DateFormat('yyyy/M/d(E)', 'ja_JP').format(dateTime);
+    final flowerDate = DateFormat('M/d', 'ja_JP').format(dateTime);
 
     final fourthDescription = _getRankingDescription(4);
     final thirdDescription = _getRankingDescription(3);
@@ -157,6 +158,7 @@ class OutputInfoController extends StateNotifier<OutputInfoState> {
     final t = Template(outputTemplate);
     final output = t.renderString({
       'targetDate': targetDate,
+      'flowerDate': flowerDate,
       'fourthResult': state.fourthBloodType,
       'fourthDescription': fourthDescription,
       'thirdResult': state.thirdBloodType,
