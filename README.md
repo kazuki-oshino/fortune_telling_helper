@@ -1,16 +1,10 @@
-# tarot_blood_type
+# Fortune-telling helper
+This app will help you with your fortune-telling by blood type using tarot.
 
-A new Flutter application.
+## How to start
+ - Run `flutter build macos` to produce a build archive.
+ - App will be created in　`build/macos/Build/Products/Release/tarot_blood_type.app`.
+ - Launch the application.
 
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Disclaimer
+You are free to use this application, but we are not responsible for any damage caused by it.
