@@ -7,7 +7,7 @@ import 'package:intl/intl.dart';
 import 'package:mustache_template/mustache.dart';
 import 'package:tarot_blood_type/common/common.dart';
 import 'package:tarot_blood_type/models/entities/tarot_result.dart';
-import 'package:tarot_blood_type/models/states/output_info_state.dart';
+import 'package:tarot_blood_type/view_models/state/output_info_state.dart';
 
 final outputInfoProvider =
     StateNotifierProvider<OutputInfoController, OutputInfoState>(

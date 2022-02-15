@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:tarot_blood_type/common/constants.dart';
-import 'package:tarot_blood_type/view_models/output_info_controller.dart';
+import 'package:tarot_blood_type/view_models/controller/output_info_controller.dart';
 import 'package:tarot_blood_type/views/parts/table_row_text_part.dart';
 
 class MainPage extends HookWidget {
