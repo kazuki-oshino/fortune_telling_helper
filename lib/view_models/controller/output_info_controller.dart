@@ -171,27 +171,26 @@ class OutputInfoController extends StateNotifier<OutputInfoState> {
     return output;
   }
 
-
   String _getRankingDescription(int rank) {
     var rankStr = 'A型';
     if (rank == 4) {
-      rankStr = state.fourthBloodType??'A型';
-    } else if(rank == 3) {
-      rankStr = state.thirdBloodType??'A型';
-    } else if(rank == 2) {
-      rankStr = state.secondBloodType??'A型';
+      rankStr = state.fourthBloodType ?? 'A型';
+    } else if (rank == 3) {
+      rankStr = state.thirdBloodType ?? 'A型';
+    } else if (rank == 2) {
+      rankStr = state.secondBloodType ?? 'A型';
     } else {
-      rankStr = state.firstBloodType??'A型';
+      rankStr = state.firstBloodType ?? 'A型';
     }
 
     if (rankStr == 'A型') {
-      return state.typeADescription??'';
+      return state.typeADescription ?? '';
     } else if (rankStr == 'B型') {
-      return state.typeBDescription??'';
+      return state.typeBDescription ?? '';
     } else if (rankStr == 'O型') {
-      return state.typeODescription??'';
+      return state.typeODescription ?? '';
     } else {
-      return state.typeABDescription??'';
+      return state.typeABDescription ?? '';
     }
   }
 }
